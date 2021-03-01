@@ -4,3 +4,7 @@ plt.figure(figsize=(12,6))
 sns.lineplot(data=museum_data)
 # Add title
 plt.title("Monthly Visitors to Los Angeles City Museums")
+
+
+sns.barplot(x=flight_data.index, y=flight_data['NK'])
+Important Note: You must select the indexing column with flight_data.index, and it is not possible to use flight_data['Month'] (which will return an error). This is because when we loaded the dataset, the "Month" column was used to index the rows. We always have to use this special notation to select the indexing column.
